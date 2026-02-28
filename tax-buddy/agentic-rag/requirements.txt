@@ -1,0 +1,22 @@
+# Agentic RAG + Knowledge Graph for TaxBuddy
+# Based on ottomator-agents/agentic-rag-knowledge-graph
+
+# Agent
+pydantic-ai>=0.3.0
+openai>=1.0.0
+
+# Embeddings (384 dims, matches Supabase)
+sentence-transformers>=2.2.0
+
+# Vector DB (Supabase via REST)
+httpx>=0.27.0
+
+# Knowledge Graph
+neo4j>=5.15.0
+
+# API
+fastapi>=0.115.0
+uvicorn>=0.30.0
+
+# Config
+python-dotenv>=1.0.0
