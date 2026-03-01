@@ -33,15 +33,18 @@ cp .env.example .env
 cd tax-buddy/agentic-rag
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 
+# 0. Start tax-buddy first (for embed API — avoids HuggingFace download)
+cd ../.. && npm run dev
+# In another terminal:
+
 # 1. Seed the knowledge graph (run after npm run seed in tax-buddy)
 python -m ingestion.ingest
 
 # 2. Start the agent API
 python run.py
-# Or: python -m uvicorn agent.api:app --host 0.0.0.0 --port 8058
 
-# 3. Use CLI or Next.js chat (API at http://localhost:8058)
-python cli.py
+# 3. Verify (with tax-buddy running): ./scripts/verify.sh [port]
+# 4. Use CLI: python cli.py
 ```
 
 ## Tax Domain Schema (Neo4j)

@@ -21,4 +21,7 @@ LLM_API_KEY = os.getenv("LLM_API_KEY") or os.getenv("DEEPSEEK_API_KEY", "")
 LLM_CHOICE = os.getenv("LLM_CHOICE", "deepseek-chat")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
 EMBED_DIM = 384
+# Use tax-buddy embed API to avoid HuggingFace download (same Xenova model).
+# Set to empty string to use sentence-transformers instead.
+EMBED_API_URL = os.getenv("EMBED_API_URL", "http://localhost:3000/api/embed")
 APP_PORT = int(os.getenv("APP_PORT", "8058"))

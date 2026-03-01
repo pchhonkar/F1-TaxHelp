@@ -5,7 +5,7 @@ TaxBuddy — AI-powered tax assistant for international students (F1/J1).
 ## Setup
 
 1. Copy `.env.local` and fill in:
-   - `DEEPSEEK_API_KEY` or `ANTHROPIC_API_KEY` — for chat AI
+   - `NVIDIA_API_KEY` (free, nvapi-...) or `DEEPSEEK_API_KEY` — for chat AI
    - `NEXT_PUBLIC_SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` — from Supabase
    - Embeddings run locally (free, no API key)
 

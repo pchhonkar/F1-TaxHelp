@@ -20,6 +20,9 @@ export interface TaxCalculation {
   ficaRefundEligible: boolean;
   ficaRefundAmount: number;
   formsNeeded: string[];
+  /** Breakdown for display */
+  federalTaxRefund?: number;
+  treatyBenefitAmount?: number;
 }
 
 export interface ChatMessage {

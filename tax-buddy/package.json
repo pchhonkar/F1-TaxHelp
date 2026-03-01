@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --hostname 127.0.0.1",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "seed": "npx tsx scripts/seed-knowledge-base.ts"
+    "seed": "npx tsx scripts/seed-knowledge-base.ts",
+    "test:rag": "npx tsx scripts/test-rag.ts",
+    "test:refund": "npx tsx scripts/test-refund-calc.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",
